@@ -2,7 +2,9 @@ zerops:
   - setup: api
     build:
       base: python@3.12
-      deploy:
+      buildCommands:
+        - echo "foobar"
+      deployFiles:
         - app.py
       addToRunPrepare:
         - requirements.txt
