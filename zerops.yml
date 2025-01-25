@@ -2,8 +2,6 @@ zerops:
   - setup: api
     build:
       base: python@3.12
-      buildCommands:
-        - echo "foobar"
       deployFiles:
         - app.py
       addToRunPrepare:
@@ -11,7 +9,6 @@ zerops:
     run:
       base: python@3.12
       prepareCommands:
-        - echo "foobar"
         - python3 -m pip install --ignore-installed -r requirements.txt
       start: python3 app.py
       ports:
